@@ -188,14 +188,14 @@ public class Homeworkh3 {
     /*
         Test Case #9
          */
-//    @Test
-//    public void test9(){
-//        driver.get("https://practice-cybertekschool.herokuapp.com");
-//        driver.findElement(By.linkText("Status Codes")).click();
-//        driver.findElement(By.linkText("200")).click();
-//        driver.findElement(By.xpath("//*[@id=\"content\"]/div/form/input")).click();
-//        Assert.assertTrue(driver.findElement(By.id("This page returned a 200 status code")).isDisplayed());
-//    }
+    @Test
+    public void test9(){
+        driver.get("https://practice-cybertekschool.herokuapp.com");
+       driver.findElement(By.linkText("Status Codes")).click();
+       driver.findElement(By.linkText("200")).click();
+      driver.findElement(By.xpath("//*[@id=\"content\"]/div/form/input")).click();
+       Assert.assertTrue(driver.findElement(By.id("This page returned a 200 status code")).isDisplayed());
+    }
 
     @AfterMethod
     public void teardown(){
