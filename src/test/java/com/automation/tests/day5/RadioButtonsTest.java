@@ -5,7 +5,7 @@ import com.automation.utilities.DriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class RadioButtonsTest {
@@ -17,17 +17,19 @@ public class RadioButtonsTest {
 
         WebDriver driver = DriverFactory.createDriver("chrome");
         driver.get("http://practice.cybertekschool.com/radio_buttons");
-        BrowserUtils.wait(2);
+        BrowserUtils.wait(4);
         //<input type="radio" id="black" name="color">
         WebElement blackButton = driver.findElement(By.id("black"));
 
         //if visible and eligible to click
-        if(blackButton.isDisplayed() && blackButton.isEnabled()){
-            System.out.println("CLICKED ON BLACK BUTTON");
-            blackButton.click();
-        }else {
-            System.out.println("FAILED TO CLICK ON BLACK BUTTON");
-        }
+       if(blackButton.isDisplayed() && blackButton.isEnabled()){
+           System.out.println("CLICKED ON BLACK BUTTON");
+           blackButton.click();
+       }else {
+           System.out.println("FAILED TO CLICK ON BLACK BUTTON");
+       }
+
+        BrowserUtils.wait(2);
 
         //how do we verify that button clicked
         //returns true, if button clicked

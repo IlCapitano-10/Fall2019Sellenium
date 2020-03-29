@@ -11,7 +11,7 @@ public class Xpath {
     public static void main(String[] args) {
         WebDriver driver = DriverFactory.createDriver("chrome");
         driver.get("http://practice.cybertekschool.com/multiple_buttons");
-        BrowserUtils.wait(5);
+        BrowserUtils.wait(3);
         //value can be inside '' or ""
         //if you don't know the tag name, or want to skip tag name, use *
         //for example //*[@onclick='button1()']  | * means any tag name
@@ -39,7 +39,7 @@ public class Xpath {
         btn5.click();
         System.out.println(result.getText());
 
-        BrowserUtils.wait(5);
+        BrowserUtils.wait(3);
         driver.quit();
     }
 }

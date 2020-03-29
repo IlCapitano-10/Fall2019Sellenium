@@ -36,7 +36,6 @@ public class NestedFrame {
         System.out.println(driver.findElement(By.tagName("body")).getText());
 
 
-
         driver.quit();
     }
 }

@@ -21,7 +21,7 @@ public class LoginTests {
     //https - data encrypted, no chance for hackers to retrieve info
     //http - data as a plain text, very easy to hack it
     private String URL = "https://qa2.vytrack.com/user/login";
-    //    CREDENTIALS FOR store manager
+//    CREDENTIALS FOR store manager
     private String username = "storemanager85";
     private String password = "UserUser123";
 
