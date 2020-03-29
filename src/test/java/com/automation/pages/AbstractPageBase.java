@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * This class will be extended by page classes
@@ -17,6 +18,7 @@ import org.openqa.selenium.support.PageFactory;
  */
 public abstract class AbstractPageBase {
     protected WebDriver driver = Driver.getDriver();
+    protected WebDriverWait wait = new WebDriverWait(driver, 15);
 
     public AbstractPageBase() {
         PageFactory.initElements(driver, this);
@@ -42,5 +44,8 @@ public abstract class AbstractPageBase {
                 pause(2000).
                 click(moduleElement).
                 build().perform();
+
+        //increase this wait rime if still failing
+        BrowserUtils.wait(4);
     }
 }

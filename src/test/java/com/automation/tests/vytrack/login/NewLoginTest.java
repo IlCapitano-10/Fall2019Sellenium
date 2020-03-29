@@ -6,7 +6,7 @@ import com.automation.utilities.Driver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
- class NewLoginTests extends AbstractTestBase {
+class NewLoginTests extends AbstractTestBase {
 
 
     @Test
